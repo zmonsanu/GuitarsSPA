@@ -1,0 +1,32 @@
+
+<h1> <small>Resultados búsqueda de: </small> {{terminoABuscar}}</h1>
+<hr>
+
+<div *ngIf="existenResultados">
+<div class="card-columns">
+  <div class="card animated fadeIn fast" *ngFor="let guitar of guitarsSearch;let i=index">
+     <!--ESTA FORMA TAMBIEN ES VALIDA
+     <img class="card-img-top img-fluid" src="{{heroe.img}}" alt="Card image cap">  -->
+     <img class="card-img-top img-fluid" [src]="guitar.img" [alt]="guitar.nombre">
+     <div class="card-body">
+       <h4 class="card-title">{{guitar.nombre}}</h4>
+
+       <button type="button" (click)="mostrarInfo=!mostrarInfo"
+       class="btn btn-outline-primary btn-block" name="button">Ver más..</button>
+       </div>
+       <div *ngIf="mostrarInfo" class="card card-inverse card-primary mb-3 text-center">
+        <p class="card-text"> {{guitar.descripcion}}</p>
+           <footer>Fecha Fabricación: {{guitar.fabricacion | date}}</footer>
+       </div>
+
+     </div>
+
+</div>
+</div>
+
+<div *ngIf="!existenResultados">
+   <h4 class="card-title animated fadeIn fast">No se han encontrado resultados...</h4>
+</div>
+
+<hr>
+  <a  [routerLink]="['/Home']" class="btn btn-outline-danger btn-block"> Volver..</a>
