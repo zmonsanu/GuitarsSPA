@@ -1,6 +1,7 @@
 {
   "name": "guitars",
   "version": "0.0.0",
+  "main":"app.js",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -9,6 +10,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
+  },
+  "engines":
+  {
+  "node":"~6.10.3",
+  "npm":"~10.3.5"
   },
   "private": true,
   "dependencies": {
