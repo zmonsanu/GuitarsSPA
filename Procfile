@@ -1,1 +1,1 @@
-web: ng server -o
+
