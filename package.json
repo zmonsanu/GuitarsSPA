@@ -1,7 +1,7 @@
 {
   "name": "guitars",
   "version": "0.0.0",
-  "main":"main.ts",
+   "main":"main.ts",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
