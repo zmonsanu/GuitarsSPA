@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PipesComponent implements OnInit {
 
-nombre:string="Zacarias";
+nombre:string="Santana";
 
-arrayGuitars:string[]=["Fenders", "Gibson","Ibanez","Jackson","Rickenbacker","Tyler","Shurs"];
+arrayGuitars:string[]=["Fenders", "Gibson","Ibanez","Knagss","PRS","Tyler","Suhr"];
 
 numeroPi= Math.PI;
 
