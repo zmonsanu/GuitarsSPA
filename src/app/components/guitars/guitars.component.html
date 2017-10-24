@@ -5,13 +5,23 @@
   <div class="card animated fadeIn fast" *ngFor="let guitar of guitars;let i=index">
      <!--ESTA FORMA TAMBIEN ES VALIDA
      <img class="card-img-top img-fluid" src="{{heroe.img}}" alt="Card image cap">  -->
-     <img class="card-img-top img-fluid" [src]="guitar.img" [alt]="guitar.nombre">
+     <img class="card-img-top img-fluid rounded-circle" [src]="guitar.img" [alt]="guitar.nombre" >
      <div class="card-body">
        <h4 class="card-title">{{guitar.nombre}}</h4>
        <p class="card-text">{{guitar.descripcion}}</p>
        <p class="card-text"><small class="text-muted">Fecha fabricación: {{guitar.fecha}}</small></p>
        <button type="button" (click)="verGuitar(i)"
        class="btn btn-outline-primary btn-block" name="button">Ver más..</button>
+<!-- BOTONES ME GUSTA
+
+       <button class="btn btn-secondary" type="button">
+  <span class="icon icon-thumbs-up"></span>
+  Like
+</button>
+<button class="btn btn-primary" type="button">
+  <span class="icon icon-thumbs-up"></span>
+  Liked!
+</button> -->
       <!--ESTA FORMA TAMBIEN ES VALIDA
        <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary">Ver más ..</a>-->
      </div>

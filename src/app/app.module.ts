@@ -18,6 +18,7 @@ import { SearchComponent } from './components/search/search.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { GuitarsComponent } from './components/guitars/guitars.component';
 import { GuitarComponent } from './components/guitar/guitar.component';
+import { PipesComponent } from './components/pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { GuitarComponent } from './components/guitar/guitar.component';
     SearchComponent,
     NavbarComponent,
     GuitarsComponent,
-    GuitarComponent
+    GuitarComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,

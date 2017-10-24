@@ -1,0 +1,108 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Variable</th>
+      <th scope="col">Pipes</th>
+      <th scope="col">Resultado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>{{nombre}}</td>
+      <td>lowercase</td>
+      <td>{{nombre | lowercase}}</td>
+    </tr>
+
+    <tr>
+      <th scope="row">2</th>
+      <td>{{nombre}}</td>
+      <td>uppercase</td>
+      <td>{{nombre | uppercase}}</td>
+    </tr>
+    <tr>
+
+      <tr>
+        <th scope="row">2</th>
+        <td>{{numeroPi}}</td>
+        <td>number</td>
+        <td>{{numeroPi | number}}</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>{{numeroPi}}</td>
+        <td>number:'3.0-0'</td>
+        <td>{{numeroPi | number:'3.0-0'}}</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>{{numeroPi}}</td>
+        <td>number:'1.0-2'</td>
+        <td>{{numeroPi | number:'1.0-2'}}</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>{{a}}</td>
+        <td>percent</td>
+        <td>{{a | percent}}</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>{{a}}</td>
+        <td>percent '2.2-4'</td>
+        <td>{{a | percent:'2.2-4'}}</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>{{precio}}</td>
+        <td>currency</td>
+        <td>{{precio | currency}}</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>{{precio}}</td>
+        <td>currency:'EUR':true</td>
+        <td>{{precio | currency:'EUR':true}}</td>
+      </tr>
+
+      <tr>
+      <th scope="row">3</th>
+      <td>{{nombre}}</td>
+      <td>slice:3</td>
+      <td>{{nombre | slice:3}}</td>
+    </tr>
+
+    <tr>
+      <th scope="row">4</th>
+      <td>{{nombre}}</td>
+      <td>slice:3:5</td>
+      <td>{{nombre | slice:3:5}}</td>
+    </tr>
+
+
+    <tr>
+      <th scope="row">5</th>
+      <td>{{arrayGuitars}}</td>
+      <td>slice:3:5</td>
+      <td>{{arrayGuitars | slice:3:5}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4> Slide con ngFor</h4>
+<ul>
+  <li *ngFor="let item of arrayGuitars">{{item}}</li>
+</ul>
+
+<h4> Slide:3:5 con ngFor</h4>
+<ul>
+  <li *ngFor="let item of arrayGuitars | slice:3:5">{{item}}</li>
+</ul>
+
+
+<h4> Pipe tipo JSON </h4>
+<pre>
+{{objGuitar | json }}
+</pre>
+<br><br><br><br><br>
