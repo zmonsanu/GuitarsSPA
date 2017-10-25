@@ -6,6 +6,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { GuitarsComponent } from './components/guitars/guitars.component';
 import { GuitarComponent } from './components/guitar/guitar.component';
 import { PipesComponent } from './components/pipes/pipes.component';
+import { Capitalizado } from './components/pipes/capitalizado.pipe';
 
 const APP_ROUTES: Routes = [
   { path: 'home', component: HomeComponent },

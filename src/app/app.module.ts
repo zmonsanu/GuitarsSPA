@@ -5,6 +5,9 @@ import { NgModule } from '@angular/core';
 import { APP_ROUTING } from './app.routes';
 
 
+//Para fechas en formato local
+import { LOCALE_ID } from '@angular/core';
+
 
 //Servicios
 import {GuitarService} from './servicios/guitar.service';
@@ -19,6 +22,9 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { GuitarsComponent } from './components/guitars/guitars.component';
 import { GuitarComponent } from './components/guitar/guitar.component';
 import { PipesComponent } from './components/pipes/pipes.component';
+import { Capitalizado } from './components/pipes/capitalizado.pipe';
+import { DomseguroPipe } from './components/pipes/domseguro.pipe';
+import { ContrasenaPipe } from './components/pipes/contrasena.pipe';
 
 @NgModule({
   declarations: [
@@ -29,13 +35,17 @@ import { PipesComponent } from './components/pipes/pipes.component';
     NavbarComponent,
     GuitarsComponent,
     GuitarComponent,
-    PipesComponent
+    PipesComponent,
+    Capitalizado,
+    DomseguroPipe,
+    ContrasenaPipe
   ],
   imports: [
     BrowserModule,
     APP_ROUTING
   ],
-  providers: [GuitarService],
+  providers: [GuitarService,
+              {provide:LOCALE_ID,useValue:'es'}],//Para fechas locales
   bootstrap: [AppComponent]
 })
 export class AppModule { }

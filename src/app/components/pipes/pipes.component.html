@@ -24,57 +24,89 @@
     <tr>
 
       <tr>
-        <th scope="row">2</th>
+        <th scope="row">3</th>
         <td>{{numeroPi}}</td>
         <td>number</td>
         <td>{{numeroPi | number}}</td>
       </tr>
       <tr>
-        <th scope="row">2</th>
+        <th scope="row">4</th>
         <td>{{numeroPi}}</td>
         <td>number:'3.0-0'</td>
         <td>{{numeroPi | number:'3.0-0'}}</td>
       </tr>
       <tr>
-        <th scope="row">2</th>
+        <th scope="row">5</th>
         <td>{{numeroPi}}</td>
         <td>number:'1.0-2'</td>
         <td>{{numeroPi | number:'1.0-2'}}</td>
       </tr>
       <tr>
-        <th scope="row">2</th>
+        <th scope="row">6</th>
         <td>{{a}}</td>
         <td>percent</td>
         <td>{{a | percent}}</td>
       </tr>
       <tr>
-        <th scope="row">2</th>
+        <th scope="row">7</th>
         <td>{{a}}</td>
         <td>percent '2.2-4'</td>
         <td>{{a | percent:'2.2-4'}}</td>
       </tr>
       <tr>
-        <th scope="row">2</th>
+        <th scope="row">8</th>
         <td>{{precio}}</td>
         <td>currency</td>
         <td>{{precio | currency}}</td>
       </tr>
       <tr>
-        <th scope="row">2</th>
+        <th scope="row">9</th>
         <td>{{precio}}</td>
         <td>currency:'EUR':true</td>
         <td>{{precio | currency:'EUR':true}}</td>
       </tr>
+      <tr>
+        <th scope="row">10</th>
+        <td>{{valordePromesa}}</td>
+        <td>async (con un retardo de 3500 msg.)</td>
+        <td>{{valordePromesa | async }}</td>
+      </tr>
 
       <tr>
-      <th scope="row">3</th>
+        <th scope="row">12</th>
+        <td>{{fechaFabrica}}</td>
+        <td>Date</td>
+        <td>{{fechaFabrica | date }}</td>
+      </tr>
+
+      <tr>
+        <th scope="row">12</th>
+        <td>{{fechaFabrica}}</td>
+        <td>date:'medium'</td>
+        <td>{{fechaFabrica | date:'medium' }}</td>
+      </tr>
+
+      <tr>
+        <th scope="row">12</th>
+        <td>{{fechaFabrica}}</td>
+        <td>date:'MMM'</td>
+        <td>{{fechaFabrica | date:'MMM' }}</td>
+      </tr>
+      <tr>
+        <th scope="row">12</th>
+        <td>{{fechaFabrica}}</td>
+        <td>date:'dd - MMM'</td>
+        <td>{{fechaFabrica | date:'dd - MMM' }}</td>
+      </tr>
+      <tr>
+      <th scope="row">11</th>
       <td>{{nombre}}</td>
       <td>slice:3</td>
       <td>{{nombre | slice:3}}</td>
     </tr>
 
     <tr>
-      <th scope="row">4</th>
+      <th scope="row">12</th>
       <td>{{nombre}}</td>
       <td>slice:3:5</td>
       <td>{{nombre | slice:3:5}}</td>
@@ -82,11 +114,43 @@
 
 
     <tr>
-      <th scope="row">5</th>
+      <th scope="row">13</th>
       <td>{{arrayGuitars}}</td>
       <td>slice:3:5</td>
       <td>{{arrayGuitars | slice:3:5}}</td>
     </tr>
+
+    <tr>
+      <th scope="row">12</th>
+      <td>{{nombreCapitalizar}}</td>
+      <td> capitalizar (pipe personalizado)</td>
+      <td>{{nombreCapitalizar | capitalizado }}</td>
+    </tr>
+
+    <tr>
+      <th scope="row">12</th>
+      <td>{{nombreCapitalizar}}</td>
+      <td> capitalizar (pipe personalizado con parametro)</td>
+      <td>{{nombreCapitalizar | capitalizado:false }}</td>
+    </tr>
+
+    <tr>
+      <th scope="row">12</th>
+      <td>{{password}}</td>
+      <td> contrasena (pipe para contraseñas)<br>
+        <button (click)="mostrar=!mostrar"
+                type=button
+                class="btn btn-primary-outline">Mostrar/Ocultar</button>
+      </td>
+        <div *ngIf="mostrar">
+            <td>{{password | contrasena:false }}</td>
+      </div>
+      <div *ngIf="!mostrar">
+          <td>{{password | contrasena:true }}</td>
+    </div>
+    </tr>
+
+
   </tbody>
 </table>
 
@@ -106,3 +170,10 @@
 {{objGuitar | json }}
 </pre>
 <br><br><br><br><br>
+<h4> Video Youtube y uso del pipe Domseguro</h4>
+<hr>
+<object width="420" height="315"
+[data]="urlVideo | domseguro:'https://www.youtube.com/embed/'">
+</object>
+
+<br><br><br><br><br><br>
