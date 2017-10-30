@@ -2,13 +2,16 @@ const express = require('express')
 const http = require('http')
 const path = require('path')
 
-
+//const api=require('./server/routes/api');
 const app = express()
 
-app.get('/', function (req, res) {
-  res.send('Hello World!')
-})
+app.use(express.static(path.join(__dirname,'dist')));
 
-app.listen(process.env.PORT || 5000, function () {
-  console.log('Example app listening on port 5000!')
-})
+app.get('*',  (req, res)=> {
+  res.send(path.join(__dirname,'dist/index.html'));});//se debe compilar ng build --env=prod
+
+const port=process.env.PORT || '3001';
+app.set('port',port);
+const server= http.createServer(app);
+
+server.listen(port,()=>console.log('Guitars App listening on port 3001!'));
