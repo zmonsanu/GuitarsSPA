@@ -17,9 +17,11 @@ export class ContrasenaPipe implements PipeTransform {
     {
       result=value;
     }
-
-
     return result;
   }
+  //Otra opcion mas corta:
+  transform2(value: string, activar: boolean = true): string {
+      return activar ? value.replace(/./gi, "*") : value;
+    }
 
 }
