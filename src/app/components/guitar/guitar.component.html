@@ -16,14 +16,14 @@
     <p> {{guitar.bio}} </p>
     <hr>
       <div class="card-img-top">
-      <!-- Si la casa es DC poner imagen de DC sino la imagen de MArvel
-        <div *ngIf="guitar.fabricante =='DC'; else elseBlock " class="card card-inverse card-primary mb-3 text-center">
-            <img src="/assets/img/DC.jpg" class="img-circle" width="200" height="200" alt="Logo DC"></div>
+      <!-- -->
+        <div *ngIf="guitar.fabricante =='Gibson'; else elseBlock " class="card card-inverse card-primary mb-3 text-center">
+            <img src="/assets/img/Gibson.jpg" class="img-circle" width="200" height="200" alt="Logo Gibson "></div>
           <ng-template #elseBlock>
-             <img src="/assets/img/marvel.png"  class="img-circle" width="200" height="200" alt="Logo Marvel">
-           </ng-template> -->
+             <img src="/assets/img/fender.png"  class="img-circle" width="200" height="200" alt="Logo Fender">
+           </ng-template>
            <hr>
 <p>
-         <small class="text-muted">Fecha aparición: {{guitar.aparicion | date:'y'}}</small></p>
+         <small class="text-muted">Fecha aparición: {{guitar.fecha | date:'y'}}</small></p>
       </div>
   </div>

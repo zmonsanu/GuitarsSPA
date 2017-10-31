@@ -14,4 +14,4 @@ const port=process.env.PORT || '3001';
 app.set('port',port);
 const server= http.createServer(app);
 
-server.listen(port,()=>console.log('Guitars App listening on port 3001!'));
+server.listen(port,()=>console.log('Guitars App running!'));
